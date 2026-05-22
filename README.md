@@ -67,7 +67,33 @@ This script ensures you never lose access again while still allowing full recove
 
 ## 🚀 Usage
 
-### 1. Make script executable
+### 1. Production Safe (Recommended)
 
 ```bash
+curl -fsSL https://raw.githubusercontent.com/djdeathgirl/Nginx-Proxy-Manager-Safe-Restore-Tool/main/npm-safe-restore.sh -o npm-safe-restore.sh && chmod +x npm-safe-restore.sh && echo "Downloaded. Run with: ./npm-safe-restore.sh"
+```
+### 2. Standard Execution
+```bash
+curl -fsSL https://raw.githubusercontent.com/djdeathgirl/Nginx-Proxy-Manager-Safe-Restore-Tool/main/npm-safe-restore.sh -o npm-safe-restore.sh && chmod +x npm-safe-restore.sh && ./npm-safe-restore.sh
+
+```
+
+
+### 3. Pipe Execution (Ultra Clean)
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/djdeathgirl/Nginx-Proxy-Manager-Safe-Restore-Tool/main/npm-safe-restore.sh)
+```
+
+### 4. Manual Mode (Safe / Inspectable)
+```bash
+curl -fsSL https://raw.githubusercontent.com/djdeathgirl/Nginx-Proxy-Manager-Safe-Restore-Tool/main/npm-safe-restore.sh -o npm-safe-restore.sh
 chmod +x npm-safe-restore.sh
+nano npm-safe-restore.sh
+./npm-safe-restore.sh
+```
+
+### 5. Mayhem Mode (Unsafe / Direct Execute)
+```bash
+curl -fsSL https://raw.githubusercontent.com/djdeathgirl/Nginx-Proxy-Manager-Safe-Restore-Tool/main/npm-safe-restore.sh | bash
+
